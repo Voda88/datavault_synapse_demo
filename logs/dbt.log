@@ -1,0 +1,20 @@
+
+
+============================== 2023-03-30 12:23:35.309240 | 8adba84d-3558-47ef-9ee4-ac27254d04a9 ==============================
+[0m12:23:35.309240 [info ] [MainThread]: Running with dbt=1.3.2
+[0m12:23:35.309240 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\MikkoKärkkäinen(Aito\\.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'datavaultdemo', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m12:23:35.309240 [debug] [MainThread]: Tracking: tracking
+[0m12:23:35.331222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F210512FB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F210512A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F210512890>]}
+[0m12:23:35.331222 [debug] [MainThread]: Starter project path: C:\Users\MikkoKärkkäinen(Aito\virtualenvs\dbt\lib\site-packages\dbt\include\starter_project
+[0m12:23:52.593328 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F210512FE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F210511540>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F210512AD0>]}
+[0m12:23:52.594336 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-03-30 12:24:00.215935 | a2953608-c2ff-469e-a70c-165e7eb3fce4 ==============================
+[0m12:24:00.215935 [info ] [MainThread]: Running with dbt=1.3.2
+[0m12:24:00.215935 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\MikkoKärkkäinen(Aito\\.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'datavaultdemo', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m12:24:00.215935 [debug] [MainThread]: Tracking: tracking
+[0m12:24:00.233371 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023BB23129B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023BB2311510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023BB23130D0>]}
+[0m12:24:00.235194 [info ] [MainThread]: A project called datavaultdemo already exists here.
+[0m12:24:00.236194 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023BB2313280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023BB2312C80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023BB2312AA0>]}
+[0m12:24:00.236194 [debug] [MainThread]: Flushing usage events
