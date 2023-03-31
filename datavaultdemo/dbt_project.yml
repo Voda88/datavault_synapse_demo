@@ -36,3 +36,11 @@ models:
     # Config indicated by + and applies to all files under models/example/
     example:
       +materialized: view
+
+
+# Seeds configuration
+seeds:
+  datavaultdemo:
+    orders:
+      +column_types:
+        order_amount: DECIMAL(10,2)

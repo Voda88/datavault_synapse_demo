@@ -1,0 +1,6 @@
+customer_id,first_name,last_name,email,phone,join_date
+100,John,Doe,john.doe@email.com,555-1234,2022-01-01
+101,Jane,Doe,jane.doe@email.com,555-5678,2022-02-01
+102,Jim,Smith,jim.smith@email.com,555-9101,2022-03-01
+103,Jill,Johnson,jill.johnson@email.com,555-1213,2022-04-01
+104,Jack,Davis,jack.davis@email.com,555-1415,2022-05-01
