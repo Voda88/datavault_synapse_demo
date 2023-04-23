@@ -33,14 +33,29 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   datavaultdemo:
-    # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
-
+    staging:
+      materialized: incremental
+      tags: ["staging"]
+    hubs:
+      materialized: incremental
+      tags: ["hubs"]
+      
 
 # Seeds configuration
 seeds:
   datavaultdemo:
+    customers:
+      +column_types:
+        customer_id:  int
+        first_name:   varchar(25)
+        last_name:    varchar(25)
+        email:        varchar(25)
+        phone:        varchar(25)
+        join_date:    date
     orders:
       +column_types:
-        order_amount: DECIMAL(10,2)
+        order_id:     int
+        customer_id:  int
+        product_id:   int
+        order_date:   date
+        order_amount: decimal(10,2)

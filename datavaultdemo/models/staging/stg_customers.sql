@@ -1,4 +1,4 @@
-{{ config(materialized='table') }}
+{{ config(materialized='incremental') }}
 
 
 SELECT
@@ -8,7 +8,10 @@ SELECT
     email,
     phone,
     join_date,
-    GETDATE() as loadDate,
+    GETDATE() as loadDate DEFAULT,
     'customers' as dataSource
 FROM
     {{ ref('customers') }}
+{% if is_incremental() %}
+WHERE customer_id NOT IN (SELECT customer_id FROM {{ this }})
+{% endif %}
