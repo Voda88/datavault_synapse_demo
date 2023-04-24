@@ -20,8 +20,8 @@ SELECT
         COALESCE(NULLIF(UPPER(TRIM(CAST(order_date AS VARCHAR))), ''), '^^'), '||',
         COALESCE(NULLIF(UPPER(TRIM(CAST(order_amount AS VARCHAR))), ''), '^^')
     )) AS BINARY(16)) AS HASHDIFF,
-    GETDATE() as loadDate,
-    'orders' as dataSource,
+    GETDATE() as LOAD_DATE,
+    'orders' as SOURCE,
     -- Source table columns
     customer_id,
     order_id,

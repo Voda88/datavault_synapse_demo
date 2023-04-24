@@ -1,7 +1,7 @@
 {{ config(materialized='incremental') }}
 
 SELECT
-    order_hash AS ORDER_PK,
+    ORDER_PK AS ORDER_PK,
     order_id AS ORDER_ID,
     loadDate AS LOAD_DATE,
     dataSource AS SOURCE 

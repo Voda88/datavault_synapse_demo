@@ -1,10 +1,10 @@
 {{ config(materialized='incremental') }}
 
 SELECT
-    customer_hash AS CUSTOMER_PK,
+    CUSTOMER_PK AS CUSTOMER_PK,
     customer_id AS CUSTOMER_ID,
-    loadDate AS LOAD_DATE,
-    dataSource AS SOURCE 
+    LOAD_DATE AS LOAD_DATE,
+    SOURCE AS SOURCE 
 FROM
     {{ ref('stg_customers') }}
 {% if is_incremental() %}

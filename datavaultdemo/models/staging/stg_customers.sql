@@ -14,8 +14,8 @@ SELECT
         COALESCE(NULLIF(UPPER(TRIM(CAST(phone AS VARCHAR))), ''), '^^'), '||',
         COALESCE(NULLIF(UPPER(TRIM(CAST(join_date AS VARCHAR))), ''), '^^')
     )) AS BINARY(16)) AS HASHDIFF,
-    GETDATE() as loadDate,
-    'customers' as dataSource,
+    GETDATE() as LOAD_DATE,
+    'customers' as SOURCE,
     -- Source table columns
     customer_id,
     first_name,

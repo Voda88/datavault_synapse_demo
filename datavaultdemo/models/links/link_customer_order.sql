@@ -1,11 +1,11 @@
 {{ config(materialized='incremental') }}
 
 SELECT
-    customer_order_hash AS CUSTOMER_ORDER_PK,
+    CUSTOMER_ORDER_PK AS CUSTOMER_ORDER_PK,
     customer_id AS CUSTOMER_ID,
     order_id AS ORDER_ID,
-    loadDate AS LOAD_DATE,
-    dataSource AS SOURCE 
+    LOAD_DATE AS LOAD_DATE,
+    SOURCE AS SOURCE
 FROM
     {{ ref('stg_orders') }}
 {% if is_incremental() %}
