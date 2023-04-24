@@ -1,10 +1,10 @@
 {{ config(materialized='incremental') }}
 
 SELECT
-    HASHBYTES('SHA2_256', CAST(order_id AS NVARCHAR(255))) AS hub_order_id,
-    order_id AS hub_order_nk,
-    loadDate AS load_date,
-    dataSource AS record_source
+    order_hash AS ORDER_PK,
+    order_id AS ORDER_ID,
+    loadDate AS LOAD_DATE,
+    dataSource AS SOURCE 
 FROM
     {{ ref('stg_orders') }}
 {% if is_incremental() %}
@@ -12,6 +12,6 @@ FROM
     WHERE NOT EXISTS (
         SELECT 1
         FROM {{ this }}
-        WHERE {{ this }}.hub_order_nk = stg_orders.order_id
+        WHERE {{ this }}.ORDER_ID = stg_orders.order_id
     )
 {% endif %}

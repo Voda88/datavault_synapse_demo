@@ -1,17 +1,17 @@
 {{ config(materialized='incremental') }}
 
 SELECT
-    HASHBYTES('SHA2_256', CAST(customer_id AS NVARCHAR(255))) AS hub_customer_id,
-    customer_id AS hub_customer_nk,
-    loadDate AS load_date,
-    dataSource AS record_source
+    customer_hash AS CUSTOMER_PK,
+    customer_id AS CUSTOMER_ID,
+    loadDate AS LOAD_DATE,
+    dataSource AS SOURCE 
 FROM
     {{ ref('stg_customers') }}
 {% if is_incremental() %}
-    -- Only load new data that doesn't exist in the hub_customer table
+    -- Only load new data that doesn't exist in the hub_customers table
     WHERE NOT EXISTS (
         SELECT 1
         FROM {{ this }}
-        WHERE {{ this }}.hub_customer_nk = stg_customers.customer_id
+        WHERE {{ this }}.CUSTOMER_ID = stg_customers.customer_id
     )
 {% endif %}
